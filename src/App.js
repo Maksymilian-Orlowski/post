@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Post from './Post';
+import EmDa from './assets/EmDa.jpg';
+import MiJo from './assets/MiJo.jpg';
+import jaSm from './assets/jaSm.jpg';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Post
+        name="Jane Smith"
+        username="@janesmith"
+        date="May 1, 2030"
+        content="Enjoying the sunny day today!"
+        profPic={jaSm}
+      />
+      <Post
+        name="Michael Johnson"
+        username="@mjohnson"
+        date="April 30, 2030"
+        content="Just finished a great workout at the gym."
+        profPic={MiJo}
+      />
+      <Post
+        name="Emily Davis"
+        username="@emilyd"
+        date="April 28, 2030"
+        content="Can't wait for the weekend!"
+        profPic={EmDa}
+      />
     </div>
   );
 }
